@@ -5,7 +5,7 @@ export function getAllCountries(){
     return async function(dispatch){
         const countriesByAxios= await axios.get('http://localhost:3001/countries');
         const allCountries=countriesByAxios.data;
-        console.log(allCountries)
+        
         return dispatch({
             type:GET_ALL_COUNTRIES,
             payload:allCountries
@@ -79,10 +79,10 @@ export function sortCountriesByPoblation(order){
 }
 export function getDetails(id){
     return async function(dispatch){
-        console.log(id)
+        
         const countryDetailByAxios=await axios.get(`http://localhost:3001/countries/${id}`)
         const countryDetail= await countryDetailByAxios.data
-        console.log(countryDetail)
+        
         return dispatch({
             type:GET_DETAILS,
             payload:countryDetail

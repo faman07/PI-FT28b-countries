@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import {getDetails,cleanDetails} from '../../redux/actions/index'
 import style from './detail.module.css'
-import BtnRetro from "../BtnRetroHome/btnRetroHome"
+import ButtonAtras from "../ButtonAtras/ButtonAtras"
 export default function Detail(){
     const dispatch=useDispatch()
     const {id}=useParams()
@@ -17,7 +17,7 @@ export default function Detail(){
     return(
 
         details?<div className={style.detailContainer}>
-            <BtnRetro/>
+            <ButtonAtras/>
             <div className={style.infoDetailsContainer}>
                 <img src={details.flag}></img>
                 <div className={style.infoDetail}>

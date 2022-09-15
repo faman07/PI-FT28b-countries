@@ -4,7 +4,7 @@ import style from './form.module.css'
 import CardCountries from '../CardCountriesSelected/cardCountriesSelected';
 import{postActivity} from '../../redux/actions/index'
 import axios from 'axios'
-import BtnRetro from '../BtnRetroHome/btnRetroHome';
+import ButtonAtras from '../ButtonAtras/ButtonAtras';
 export default function Form(){
     const dispatch=useDispatch()
     const allCountries=useSelector(state=>state.allCountries)
@@ -47,7 +47,7 @@ export default function Form(){
     function validateInp(current){
         let err={}
         if(!current.name) err.name='name is required'
-        console.log(err)
+        // console.log(err)
         if(!current.duration) err.duration='duration is required'
         if(parseInt(current.duration)<1) err.duration='duration is invalid'
         return err;
@@ -104,7 +104,7 @@ export default function Form(){
     return(
 
         <div className={style.formContainer}>
-            <BtnRetro/>
+            <ButtonAtras/>
             <form onSubmit={handleSubmit}>
                 <h2>CREAR ACTIVIDAD TURISTICA</h2>
                 <p className={style.labelForm}>NOMBRE DE ACTIVIDAD</p>
