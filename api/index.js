@@ -19,10 +19,12 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-
+const {getCountriesApi}=require('../api/src/routes/controllers/LoadDb/LoadDb')
+//const axios =require('axios')
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
+  server.listen(3001, async () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
+    await getCountriesApi()
   });
 });
