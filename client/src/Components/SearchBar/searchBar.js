@@ -15,7 +15,7 @@ export default function SearchBar({setCurrentPage}){
     return(
         <div className={style.searchContainer}>
             
-            <input className={style.inpSearch} type='text' value={countrySearch} onChange={(e)=>setCountry(e.target.value)} placeholder='Country...'></input>
+            <input className={style.inpSearch} type='text' value={countrySearch} onChange={(e)=>setCountry(e.target.value)} placeholder='País...'></input>
             <button className={style.btnSearch} onClick={handleSearch}>Search</button>
         </div>
     )

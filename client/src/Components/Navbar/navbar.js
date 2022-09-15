@@ -38,10 +38,7 @@ export default function Navbar({setCurrentPage,setOrden}){
     return(
         <div className={style.navbarContainer}>
             <div className={style.navbar}>
-                {/* <h2 onClick={()=>{
-                    dispatch(getAllCountries())
-                    setCurrentPage(1)
-                }}>Henry Countries</h2> */}
+               
                 <NavLink to= '/'>
                     <img  onClick={()=>{
                     dispatch(getAllCountries())
