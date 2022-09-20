@@ -115,7 +115,8 @@ export default function Form(){
                 <input type='range' min='1' max='5' name='difficulty' value={input.difficulty} onChange={handleInputChange}/>
                 <p className={style.labelForm}>DURACION</p>
                 {!!error.duration&&<p className={style.danger}>{error.duration}</p>}
-                <input type='number' min='0' max='24' placeholder='max. 24 hs' className={style.inpForm} name='duration' value={input.duration} onChange={handleInputChange}/>
+                <p>ho</p>
+                <input type='number'  className={style.inpForm} name='duration' value={input.duration} onChange={handleInputChange}/>
                 <label className={style.labelForm}>  HORAS</label>
                 <p className={style.labelForm}>Season</p>
                 <select value={select.season} name='season' onChange={handleSelectChange}>

@@ -1,5 +1,7 @@
 const axios =require('axios');
 const {Country,Activity}=require('../../db')
+
+
 async function getAllCountries(req,res){
     
     try{
